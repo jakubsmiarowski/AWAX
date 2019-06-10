@@ -1,0 +1,158 @@
+        @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+        @import "variables";
+        //Mixins
+        @mixin background {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        @mixin section-heading {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: "Montserrat";
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 14px;
+                color: #aeaeae;
+            }
+        }
+        
+        @mixin button-style {
+            width: 194px;
+            height: 45px;
+            background-color: $gold;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: $white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: .5s ease-out;
+            &:hover {
+                background-color: $white;
+                color: $gold;
+                border: 1px solid $gold;
+            }
+        }
+        
+        // GLOBAL STYLES
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: "Montserrat";
+        }
+        
+        .header {
+            @include section-heading;
+        }
+        
+        // Navigation
+        .nav-bar {
+            background-color: $black;
+            height: 100px;
+            z-index: 2;
+            img {
+                float: left;
+                width: 50px;
+                height: 50px;
+                margin-top: 20px;
+                margin-left: 45px;
+            }
+            ul {
+                list-style: none;
+                float: right;
+                height: 100%;
+                li {
+                    display: inline-block;
+                    position: relative;
+                    padding: 40px 20px;
+                    transition: .5s ease;
+                    border: none;
+                    &:hover {
+                        border-bottom: 2px solid $gold;
+                    }
+                    a {
+                        width: 45px;
+                        height: 10px;
+                        color: $white;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+        // Hero
+        .hero {
+            @include background;
+            width: 100%;
+            height: 90vh;
+            background: $black;
+            background-image: url('images/Bg_img_01.png');
+            position: relative;
+            .hero-container {
+                text-align: center;
+                padding-top: 150px;
+                h1 {
+                    font-size: 72px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    &:first-of-type {
+                        color: $white;
+                    }
+                    color: $gold;
+                }
+                p {
+                    color: $white;
+                    font-size: 24px;
+                    font-family: "Montserrat - Semi Bold";
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+                .button {
+                    @include button-style;
+                }
+            }
+            .phonecall {
+                position: absolute;
+                right: 5%;
+                bottom: -5%;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .about {
+            padding: 120px 0;
+            .about-content {
+                margin: 0 75px;
+                .about-paragraph {
+                    width: 50%;
+                    p {
+                        width: 634px;
+                        color: #242424;
+                        font-family: 'Montserrat';
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 25px;
+                        margin: 25px 50px;
+                        text-align: center;
+                    }
+                }
+                .about-video {
+                    width: 50%;
+                    float: right;
+                }
+            }
+        }
