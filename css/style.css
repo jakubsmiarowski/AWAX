@@ -8,19 +8,19 @@
   font-family: "Montserrat";
 }
 
-.header {
+.heading {
   width: 100%;
   text-transform: uppercase;
   text-align: center;
   font-family: "Montserrat";
 }
 
-.header h3 {
+.heading h3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
-.header p {
+.heading p {
   font-size: 14px;
   color: #aeaeae;
 }
@@ -142,20 +142,34 @@
 
 .about .about-content {
   margin: 0 75px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .about .about-content p {
-  width: 300px;
+  width: 600px;
   color: #1e272e;
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 300;
   line-height: 25px;
-  margin: 25px 50px;
+  margin: 25px auto;
   text-align: center;
 }
 
-.about .about-content .button {
+.about .about-content video {
+  width: 320px;
+  vertical-align: baseline;
+  margin-left: 150px;
+}
+
+.about .button {
   width: 194px;
   height: 45px;
   background-color: #B98B59;
@@ -166,19 +180,190 @@
   border-radius: 25px;
   cursor: pointer;
   transition: .5s ease-out;
-  margin-left: 75px;
+  margin-left: 15%;
 }
 
-.about .about-content .button:hover {
+.about .button:hover {
   background-color: #FFFFFF;
   color: #B98B59;
   border: 1px solid #B98B59;
 }
 
-.about .about-content video {
-  width: 300px;
+.services {
+  background: #1e272e;
+  padding: 120px 0;
+}
+
+.services .heading {
+  color: #FFFFFF;
+}
+
+.services .services-content {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.services .services-content .service {
   display: inline-block;
-  float: right;
+  max-width: 285px;
+  height: 240px;
+  padding: 20px 25px;
+  width: 24%;
+  border-left: 5px solid #FFFFFF;
+}
+
+.services .services-content .service:last-of-type {
+  border-right: 5px solid #FFFFFF;
+}
+
+.services .services-content .service img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.services .services-content .service h3 {
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.services .services-content .service p {
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.projects {
+  padding: 120px 0;
+}
+
+.projects .projects-list {
+  background: #ededed;
+  border: 3px solid #d0d0d0;
+  border-radius: 25px;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.projects .projects-list ul {
+  list-style-type: none;
+  align-self: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+
+.projects .projects-list ul li {
+  display: inline-block;
+  padding: 15px 25px 10px 25px;
+  transition: .5s ease-out;
+  border-right: 1px solid #d0d0d0;
+}
+
+.projects .projects-list ul li:first-of-type {
+  margin-left: 30px;
+}
+
+.projects .projects-list ul li:last-of-type {
+  border: none;
+}
+
+.projects .projects-list ul li:hover {
+  border-bottom: 2px solid #B98B59;
+  cursor: pointer;
+}
+
+.projects .projects-content {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.projects .projects-content .projects-img {
+  display: inline-block;
+  width: 20%;
+  margin: 2%;
+  position: relative;
+}
+
+.projects .projects-content .projects-img img {
+  margin: 0;
+  height: auto;
+  width: 290px;
+  height: 165px;
+}
+
+.projects .projects-content .projects-img .overlay {
+  width: 290px;
+  height: 165px;
+  position: absolute;
+  opacity: 0;
+  transition: .5s ease-in-out;
+  top: 0;
+  left: 0;
+  background-color: #1e272e;
+}
+
+.projects .projects-content .projects-img .overlay .overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.projects .projects-content .projects-img .overlay .overlay-text h3 {
+  text-transform: uppercase;
+}
+
+.projects .projects-content .projects-img:hover .overlay {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.projects .button {
+  width: 194px;
+  height: 45px;
+  background-color: #B98B59;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: .5s ease-out;
+  display: block;
+  margin: 0 auto;
+}
+
+.projects .button:hover {
+  background-color: #FFFFFF;
+  color: #B98B59;
+  border: 1px solid #B98B59;
+}
+
+.team {
+  background-image: url(images/Bg_img_01.png);
+  background-color: #1e272e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 0 25px 0;
+}
+
+.team .heading {
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
