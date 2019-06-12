@@ -75,7 +75,7 @@
   width: 100%;
   height: 90vh;
   background: #1e272e;
-  background-image: url("images/Bg_img_01.png");
+  background-image: url("../images/Bg_img_01.png");
   position: relative;
 }
 
@@ -138,6 +138,7 @@
 
 .about {
   padding: 120px 0;
+  background-color: #F7F7F7;
 }
 
 .about .about-content {
@@ -240,6 +241,7 @@
 
 .projects {
   padding: 120px 0;
+  background-color: #F7F7F7;
 }
 
 .projects .projects-list {
@@ -353,7 +355,7 @@
 }
 
 .team {
-  background-image: url(images/Bg_img_01.png);
+  background-image: url("../images/Bgimage.png");
   background-color: #1e272e;
   background-repeat: no-repeat;
   background-size: cover;
@@ -364,6 +366,133 @@
 
 .team .heading {
   color: #FFFFFF;
+}
+
+.team .team-content {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.team .team-content .team-member {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  margin: 45px;
+  background-color: #FFFFFF;
+}
+
+.team .team-content .team-member img {
+  display: block;
+  margin: 25px auto;
+}
+
+.team .team-content .team-member h4 {
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  margin: 25px 0;
+}
+
+.team .team-content .team-member p {
+  text-align: center;
+  font-family: 'Montserrat';
+  margin: 25px 0;
+}
+
+.team .team-content .team-member .team-icons {
+  width: 100%;
+}
+
+.team .team-content .team-member .team-icons i {
+  height: 33px;
+  width: 33px;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 3px;
+  background: #bebebe;
+  color: #FFFFFF;
+  background-size: 70px 70px;
+  transition: .5s ease-in;
+}
+
+.team .team-content .team-member .team-icons i:hover {
+  background: #B98B59;
+  cursor: pointer;
+}
+
+.clients {
+  background-color: #F7F7F7;
+  padding: 120px 0;
+}
+
+.clients .heading {
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.clients .heading h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.clients .heading p {
+  font-size: 14px;
+  color: #aeaeae;
+}
+
+.clients .clients-content {
+  display: block;
+  margin: 20px auto;
+}
+
+.clients .clients-content img {
+  display: block;
+  margin: 35px auto;
+}
+
+.clients .clients-content h3 {
+  color: #1e272e;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.clients .clients-content p {
+  color: #1e272e;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.clients .clients-content p:last-of-type {
+  color: #7e7e7e;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.patrons {
+  width: 100%;
+  margin: 50px auto;
+}
+
+.patrons img {
+  margin-left: 55px;
+  padding: 40px;
+}
+
+.price {
+  background-color: #F7F7F7;
 }
 
 /*# sourceMappingURL=style.css.map */
