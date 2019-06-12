@@ -54,7 +54,7 @@
 }
 
 .nav-bar ul li:hover {
-  border-bottom: 2px solid #B98B59;
+  border-bottom: 4px solid #B98B59;
 }
 
 .nav-bar ul li a {
@@ -87,7 +87,7 @@
 .hero .hero-container h1 {
   font-size: 72px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 1000;
   color: #B98B59;
 }
 
@@ -122,6 +122,10 @@
   border: 1px solid #B98B59;
 }
 
+.hero .hero-container .button:hover {
+  background-color: #1e272e;
+}
+
 .hero .phonecall {
   position: absolute;
   right: 5%;
@@ -140,13 +144,9 @@
   margin: 0 75px;
 }
 
-.about .about-content .about-paragraph {
-  width: 50%;
-}
-
-.about .about-content .about-paragraph p {
-  width: 634px;
-  color: #242424;
+.about .about-content p {
+  width: 300px;
+  color: #1e272e;
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 300;
@@ -155,8 +155,29 @@
   text-align: center;
 }
 
-.about .about-content .about-video {
-  width: 50%;
+.about .about-content .button {
+  width: 194px;
+  height: 45px;
+  background-color: #B98B59;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: .5s ease-out;
+  margin-left: 75px;
+}
+
+.about .about-content .button:hover {
+  background-color: #FFFFFF;
+  color: #B98B59;
+  border: 1px solid #B98B59;
+}
+
+.about .about-content video {
+  width: 300px;
+  display: inline-block;
   float: right;
 }
 
