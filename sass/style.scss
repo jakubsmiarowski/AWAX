@@ -34,9 +34,10 @@
                         cursor: pointer;
                         transition: .5s ease-out;
                         &:hover {
-                            background-color: $white;
+                            background-color: $gray;
                             color: $gold;
-                            border: 1px solid $gold;
+                            font-weight: 1000;
+                            border: 3px solid $gold;
                         }
                     }
                     
@@ -138,7 +139,7 @@
                     
                     // About
                     .about {
-                        padding: 120px 0;
+                        padding: 120px 0 30px 0;
                         background-color: $gray;
                         .about-content {
                             margin: 0 75px;
@@ -175,7 +176,7 @@
                     // Services
                     .services {
                         background: $black;
-                        padding: 120px 0;
+                        padding: 120px 0 30px 0;
                         .heading {
                             color: $white;
                         }
@@ -217,7 +218,7 @@
                     
                     // Projects
                     .projects {
-                        padding: 120px 0;
+                        padding: 120px 0 30px 0;
                         background-color: $gray;
                         .projects-list {
                             background: #ededed;
@@ -308,7 +309,7 @@
                         background-color: $black;
                         @include background;
                         background-repeat: no-repeat;
-                        padding: 120px 0 25px 0;
+                        padding: 120px 0 30px 0;
                         .heading {
                             color: $white;
                         }
@@ -363,7 +364,7 @@
                     // Clients
                     .clients {
                         background-color: $gray;
-                        padding: 120px 0;
+                        padding: 120px 0 30px 0;
                         .heading {
                             @include section-heading;
                         }
@@ -418,7 +419,7 @@
                     
                     // Premium
                     .premium {
-                        padding: 120px 0;
+                        padding: 120px 0 30px 0;
                         .premium-content {
                             margin: 75px 0 0 60px;
                             width: 100%;
@@ -448,11 +449,137 @@
                                     }
                                     ul {
                                         list-style-type: none;
-                                        margin-left: -30px;
+                                        margin-top: 10px;
                                         li {
                                             color: $black;
+                                            text-transform: uppercase;
                                         }
                                     }
+                                }
+                            }
+                        }
+                        .premium-line {
+                            content: "";
+                            width: 1000px;
+                            border: 0.5px solid $black;
+                            display: block;
+                            margin: 25px auto;
+                        }
+                        .button {
+                            @include button-style;
+                            display: block;
+                            margin: 20px auto;
+                        }
+                    }
+                    
+                    // Facts
+                    .facts {
+                        padding: 120px 0 30px 0;
+                        background-color: $black;
+                        .heading {
+                            color: $white;
+                        }
+                        .facts-content {
+                            width: 90%;
+                            display: block;
+                            margin: 20px auto;
+                            .facts-numbers {
+                                width: 20%;
+                                display: inline-block;
+                                padding: 30px;
+                                margin-right: 60px;
+                                text-align: center;
+                                &:first-of-type {
+                                    margin-left: 10px;
+                                }
+                                h4 {
+                                    color: $gold;
+                                    font-size: 32px;
+                                }
+                                .facts-line {
+                                    content: "";
+                                    width: 30px;
+                                    border: 1px solid $gray;
+                                    display: block;
+                                    margin: 25px auto;
+                                }
+                                h5 {
+                                    color: $white;
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    height: 30px;
+                                    max-width: 170px;
+                                    display: block;
+                                    margin: 15px auto;
+                                }
+                                p {
+                                    width: 200px;
+                                    display: block;
+                                    margin: 25px auto;
+                                    color: $gray;
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Icons
+                    .icon-bar {
+                        padding: 50px;
+                        width: 80%;
+                        margin: 0 auto;
+                        .icon {
+                            display: inline-block;
+                            margin: 0 auto;
+                            margin-right: 100px;
+                            &:first-of-type {
+                                margin-left: 50px;
+                            }
+                            p {
+                                display: inline-block;
+                                color: $black;
+                                font-weight: 600;
+                                margin-left: 1px;
+                            }
+                        }
+                    }
+                    
+                    // Contact
+                    .contact {
+                        padding: 120px 0 30px 0;
+                        background-color: $gray;
+                        .contact-content {
+                            width: 100%;
+                            max-width: 520px;
+                            margin: 20px auto;
+                            display: block;
+                            form {
+                                input {
+                                    border: none;
+                                    border-bottom: 2px solid #8b8b8b;
+                                    width: 250px;
+                                    margin: 25px 5px;
+                                    text-transform: uppercase;
+                                    display: inline-block;
+                                    &:nth-of-type(2) {
+                                        float: right;
+                                    }
+                                    &:last-of-type {
+                                        width: 520px;
+                                        display: block;
+                                    }
+                                }
+                                textarea {
+                                    width: 520px;
+                                    height: 50px;
+                                    margin: 15px 5px;
+                                    border: none;
+                                    border-bottom: 2px solid #8b8b8b;
+                                    text-transform: uppercase;
+                                }
+                                .button {
+                                    @include button-style;
+                                    display: block;
+                                    margin: 20px auto;
                                 }
                             }
                         }
