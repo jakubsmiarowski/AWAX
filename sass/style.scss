@@ -317,7 +317,7 @@
                             margin: 50px auto;
                             .team-member {
                                 display: inline-block;
-                                width: 300px;
+                                width: 306px;
                                 height: 400px;
                                 margin: 45px;
                                 background-color: $white;
@@ -414,4 +414,46 @@
                     // Prices
                     .price {
                         background-color: $gray;
+                    }
+                    
+                    // Premium
+                    .premium {
+                        padding: 120px 0;
+                        .premium-content {
+                            margin: 75px 0 0 60px;
+                            width: 100%;
+                            .premium-img {
+                                width: 40%;
+                            }
+                            .feature {
+                                float: right;
+                                display: block;
+                                width: 40%;
+                                margin: 75px 60px 0 0;
+                                position: relative;
+                                img {
+                                    position: absolute;
+                                    left: -115px;
+                                }
+                                .feature-content {
+                                    margin-bottom: 30px;
+                                    h3 {
+                                        font-size: 21px;
+                                        text-transform: uppercase;
+                                        font-weight: 750;
+                                    }
+                                    p {
+                                        max-width: 450px;
+                                        color: $black;
+                                    }
+                                    ul {
+                                        list-style-type: none;
+                                        margin-left: -30px;
+                                        li {
+                                            color: $black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
