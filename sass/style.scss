@@ -556,6 +556,7 @@
                                 input {
                                     border: none;
                                     border-bottom: 2px solid #8b8b8b;
+                                    background: $gray;
                                     width: 250px;
                                     margin: 25px 5px;
                                     text-transform: uppercase;
@@ -575,6 +576,7 @@
                                     border: none;
                                     border-bottom: 2px solid #8b8b8b;
                                     text-transform: uppercase;
+                                    background: $gray;
                                 }
                                 .button {
                                     @include button-style;
@@ -627,14 +629,8 @@
                         padding: 25px 0;
                         position: relative;
                         .container {
-                            width: 90%;
+                            width: 100%;
                             margin: 20px auto;
-                            &:before,
-                            &:after {
-                                content: "";
-                                display: table;
-                                clear: both;
-                            }
                             .row {
                                 position: relative;
                                 &:before,
@@ -644,7 +640,7 @@
                                     clear: both;
                                 }
                                 .col-3 {
-                                    width: 30%;
+                                    width: 25%;
                                     display: inline-block;
                                     margin: 40px;
                                     .team-icons {
@@ -663,6 +659,34 @@
                                                 background: $gold;
                                                 cursor: pointer;
                                             }
+                                        }
+                                    }
+                                    &::last-of-type {
+                                        float: right;
+                                    }
+                                    .footer-box {
+                                        width: 350px;
+                                        height: 200px;
+                                        background: #373737;
+                                        text-align: center;
+                                        padding: 50px 0;
+                                        input {
+                                            display: block;
+                                            color: $gray;
+                                            text-transform: uppercase;
+                                            margin: 0 auto;
+                                            background-color: #373737;
+                                            border: none;
+                                        }
+                                        .footer-line {
+                                            content: "";
+                                            width: 150px;
+                                            border: 1px solid $gray;
+                                            display: block;
+                                            margin: 25px auto;
+                                        }
+                                        .button {
+                                            @include button-style;
                                         }
                                     }
                                 }
