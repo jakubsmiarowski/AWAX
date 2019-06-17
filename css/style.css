@@ -498,6 +498,82 @@
   background-color: #F7F7F7;
 }
 
+.price .container {
+  width: 70%;
+  margin: 25px auto;
+}
+
+.price .container .price-border {
+  background: #FFFFFF;
+  width: 255px;
+  height: 343px;
+  text-align: center;
+  padding: 25px 0 25px 0;
+  display: inline-block;
+}
+
+.price .container .price-border h3 {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #242424;
+}
+
+.price .container .price-border p {
+  color: #242424;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+}
+
+.price .container .price-border p span {
+  font-size: 10px;
+}
+
+.price .container .price-border ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.price .container .price-border ul li {
+  color: #7e7e7e;
+  font-family: 'Montserrat';
+  font-size: 10px;
+  font-weight: 550;
+  line-height: 13px;
+}
+
+.price .container .price-border .button {
+  width: 194px;
+  height: 45px;
+  background-color: #B98B59;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: .5s ease-out;
+  background-color: #1e272e;
+  margin-top: 20px;
+}
+
+.price .container .price-border .button:hover {
+  background-color: #F7F7F7;
+  color: #B98B59;
+  font-weight: 1000;
+  border: 3px solid #B98B59;
+}
+
+.price .container .price-border .button:hover {
+  background-color: #B98B59;
+  color: #FFFFFF;
+}
+
 .premium {
   padding: 120px 0 30px 0;
 }
@@ -774,31 +850,39 @@ footer {
 }
 
 footer .container {
-  width: 100%;
+  width: 80%;
   margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-footer .container .row {
-  position: relative;
+footer .container .awax {
+  color: #FFFFFF;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 30px;
+  left: 15%;
+  text-transform: uppercase;
 }
 
-footer .container .row:before, footer .container .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-footer .container .row .col-3 {
+footer .container .col-3 {
   width: 25%;
-  display: inline-block;
-  margin: 40px;
+  align-self: center;
 }
 
-footer .container .row .col-3 .team-icons {
+footer .container .col-3 p {
+  font-size: 15px;
+  color: #F7F7F7;
+}
+
+footer .container .col-3 .team-icons {
   width: 100%;
 }
 
-footer .container .row .col-3 .team-icons i {
+footer .container .col-3 .team-icons i {
   height: 33px;
   width: 33px;
   padding: 10px;
@@ -810,16 +894,21 @@ footer .container .row .col-3 .team-icons i {
   transition: .5s ease-in;
 }
 
-footer .container .row .col-3 .team-icons i:hover {
+footer .container .col-3 .team-icons i:hover {
   background: #B98B59;
   cursor: pointer;
 }
 
-footer .container .row .col-3::last-of-type {
+footer .container .col-3:nth-child(1) {
+  align-self: flex-start;
+  width: 300px;
+}
+
+footer .container .col-3::last-of-type {
   float: right;
 }
 
-footer .container .row .col-3 .footer-box {
+footer .container .col-3 .footer-box {
   width: 350px;
   height: 200px;
   background: #373737;
@@ -827,7 +916,7 @@ footer .container .row .col-3 .footer-box {
   padding: 50px 0;
 }
 
-footer .container .row .col-3 .footer-box input {
+footer .container .col-3 .footer-box input {
   display: block;
   color: #F7F7F7;
   text-transform: uppercase;
@@ -836,7 +925,7 @@ footer .container .row .col-3 .footer-box input {
   border: none;
 }
 
-footer .container .row .col-3 .footer-box .footer-line {
+footer .container .col-3 .footer-box .footer-line {
   content: "";
   width: 150px;
   border: 1px solid #F7F7F7;
@@ -844,7 +933,7 @@ footer .container .row .col-3 .footer-box .footer-line {
   margin: 25px auto;
 }
 
-footer .container .row .col-3 .footer-box .button {
+footer .container .col-3 .footer-box .button {
   width: 194px;
   height: 45px;
   background-color: #B98B59;
@@ -857,11 +946,15 @@ footer .container .row .col-3 .footer-box .button {
   transition: .5s ease-out;
 }
 
-footer .container .row .col-3 .footer-box .button:hover {
+footer .container .col-3 .footer-box .button:hover {
   background-color: #F7F7F7;
   color: #B98B59;
   font-weight: 1000;
   border: 3px solid #B98B59;
+}
+
+footer .container .col-3 .footer-box .button:hover {
+  background-color: #373737;
 }
 
 footer .scroll-up {

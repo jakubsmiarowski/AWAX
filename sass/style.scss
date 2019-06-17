@@ -415,6 +415,58 @@
                     // Prices
                     .price {
                         background-color: $gray;
+                        .container {
+                            width: 70%;
+                            margin: 25px auto;
+                            .price-border {
+                                background: $white;
+                                width: 255px;
+                                height: 343px;
+                                text-align: center;
+                                padding: 25px 0 25px 0;
+                                // margin: 0 20px;
+                                display: inline-block;
+                                h3 {
+                                    font-family: 'Montserrat';
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    color: #242424;
+                                }
+                                p {
+                                    color: #242424;
+                                    font-family: 'Montserrat';
+                                    font-size: 30px;
+                                    font-weight: 900;
+                                    line-height: 21px;
+                                    text-transform: uppercase;
+                                    letter-spacing: 4.8px;
+                                    span {
+                                        font-size: 10px;
+                                    }
+                                }
+                                ul {
+                                    list-style-type: none;
+                                    padding: 0;
+                                    li {
+                                        color: #7e7e7e;
+                                        font-family: 'Montserrat';
+                                        font-size: 10px;
+                                        font-weight: 550;
+                                        line-height: 13px;
+                                    }
+                                }
+                                .button {
+                                    @include button-style;
+                                    background-color: $black;
+                                    margin-top: 20px;
+                                    &:hover {
+                                        background-color: $gold;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
                     }
                     
                     // Premium
@@ -629,64 +681,78 @@
                         padding: 25px 0;
                         position: relative;
                         .container {
-                            width: 100%;
+                            width: 80%;
                             margin: 20px auto;
-                            .row {
-                                position: relative;
-                                &:before,
-                                &:after {
-                                    content: "";
-                                    display: table;
-                                    clear: both;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            flex-wrap: wrap;
+                            .awax {
+                                color: $white;
+                                margin-bottom: 0;
+                                position: absolute;
+                                bottom: 30px;
+                                left: 15%;
+                                text-transform: uppercase;
+                            }
+                            .col-3 {
+                                width: 25%;
+                                align-self: center;
+                                p {
+                                    font-size: 15px;
+                                    color: $gray;
                                 }
-                                .col-3 {
-                                    width: 25%;
-                                    display: inline-block;
-                                    margin: 40px;
-                                    .team-icons {
-                                        width: 100%;
-                                        i {
-                                            height: 33px;
-                                            width: 33px;
-                                            padding: 10px;
-                                            border-radius: 50%;
-                                            margin: 3px;
-                                            background: #bebebe;
-                                            color: $white;
-                                            background-size: 70px 70px;
-                                            transition: .5s ease-in;
-                                            &:hover {
-                                                background: $gold;
-                                                cursor: pointer;
-                                            }
+                                .team-icons {
+                                    width: 100%;
+                                    i {
+                                        height: 33px;
+                                        width: 33px;
+                                        padding: 10px;
+                                        border-radius: 50%;
+                                        margin: 3px;
+                                        background: #bebebe;
+                                        color: $white;
+                                        background-size: 70px 70px;
+                                        transition: .5s ease-in;
+                                        &:hover {
+                                            background: $gold;
+                                            cursor: pointer;
                                         }
                                     }
-                                    &::last-of-type {
-                                        float: right;
+                                }
+                                &:nth-child(1) {
+                                    align-self: flex-start;
+                                    width: 300px;
+                                }
+                                &::last-of-type {
+                                    float: right;
+                                }
+                                .footer-box {
+                                    width: 350px;
+                                    height: 200px;
+                                    background: #373737;
+                                    text-align: center;
+                                    padding: 50px 0;
+                                    input {
+                                        display: block;
+                                        color: $gray;
+                                        text-transform: uppercase;
+                                        margin: 0 auto;
+                                        background-color: #373737;
+                                        border: none;
                                     }
-                                    .footer-box {
-                                        width: 350px;
-                                        height: 200px;
-                                        background: #373737;
-                                        text-align: center;
-                                        padding: 50px 0;
-                                        input {
-                                            display: block;
-                                            color: $gray;
-                                            text-transform: uppercase;
-                                            margin: 0 auto;
+                                    .footer-line {
+                                        content: "";
+                                        width: 150px;
+                                        border: 1px solid $gray;
+                                        display: block;
+                                        margin: 25px auto;
+                                    }
+                                    .button {
+                                        @include button-style;
+                                        &:hover {
                                             background-color: #373737;
-                                            border: none;
-                                        }
-                                        .footer-line {
-                                            content: "";
-                                            width: 150px;
-                                            border: 1px solid $gray;
-                                            display: block;
-                                            margin: 25px auto;
-                                        }
-                                        .button {
-                                            @include button-style;
                                         }
                                     }
                                 }
