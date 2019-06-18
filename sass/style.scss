@@ -1,766 +1,767 @@
-                    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-                    @import "variables";
-                    //Mixins
-                    @mixin background {
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: center;
-                    }
-                    
-                    @mixin section-heading {
-                        width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900,900i|Poppins:400,600,700,800,900&display=swap');
+@import "variables";
+//Mixins
+@mixin background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin section-heading {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    h3 {
+        font-size: 24px;
+        font-weight: 800;
+    }
+    p {
+        font-size: 14px;
+        color: #aeaeae;
+    }
+}
+
+@mixin button-style {
+    width: 194px;
+    height: 45px;
+    background-color: $gold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .5s ease-out;
+    &:hover {
+        background-color: $gray;
+        color: $gold;
+        font-weight: 1000;
+        border: 3px solid $gold;
+    }
+}
+
+// GLOBAL STYLES
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Montserrat";
+}
+
+.heading {
+    @include section-heading;
+}
+
+// Navigation
+.nav-bar {
+    background-color: $black;
+    height: 100px;
+    z-index: 2;
+    img {
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        margin-left: 45px;
+    }
+    ul {
+        list-style: none;
+        float: right;
+        height: 100%;
+        margin-right: 25px;
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 40px 20px;
+            transition: .5s ease;
+            border: none;
+            &:hover {
+                border-bottom: 4px solid $gold;
+            }
+            a {
+                width: 45px;
+                height: 10px;
+                color: $white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// Hero
+.hero {
+    @include background;
+    width: 100%;
+    height: 90vh;
+    background: $black;
+    background-image: url("../images/Bg_img_01.png");
+    position: relative;
+    .hero-container {
+        text-align: center;
+        padding-top: 250px;
+        h1 {
+            font-size: 72px;
+            text-transform: uppercase;
+            font-weight: 1000;
+            &:first-of-type {
+                color: $white;
+            }
+            color: $gold;
+        }
+        p {
+            color: $white;
+            font-size: 24px;
+            font-family: "Montserrat - Semi Bold";
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .button {
+            @include button-style;
+            &:hover {
+                background-color: $black;
+            }
+        }
+    }
+    .phonecall {
+        position: absolute;
+        right: 5%;
+        bottom: -5%;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// About
+.about {
+    padding: 120px 0 30px 0;
+    background-color: $gray;
+    .about-content {
+        margin: 0 75px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        p {
+            width: 600px;
+            color: $black;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 25px;
+            text-align: center;
+        }
+        video {
+            width: 320px;
+            vertical-align: baseline;
+            margin-left: 150px;
+        }
+    }
+    .button {
+        @include button-style;
+        margin-left: 15%;
+    }
+}
+
+// Services
+.services {
+    background: $black;
+    padding: 120px 0 30px 0;
+    .heading {
+        color: $white;
+    }
+    .services-content {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px;
+        .service {
+            display: inline-block;
+            max-width: 285px;
+            height: 240px;
+            padding: 20px 25px;
+            width: 24%;
+            border-left: 5px solid $white;
+            &:last-of-type {
+                border-right: 5px solid $white;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+            h3 {
+                color: $white;
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 20px;
+            }
+            p {
+                color: $white;
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// Projects
+.projects {
+    padding: 120px 0 30px 0;
+    background-color: $gray;
+    .projects-list {
+        background: #ededed;
+        border: 3px solid #d0d0d0;
+        border-radius: 25px;
+        width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+        ul {
+            list-style-type: none;
+            align-self: center;
+            text-transform: uppercase;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            li {
+                display: inline-block;
+                padding: 15px 25px 10px 25px;
+                transition: .5s ease-out;
+                border-right: 1px solid #d0d0d0;
+                &:first-of-type {
+                    margin-left: 30px;
+                }
+                &:last-of-type {
+                    border: none;
+                }
+                &:hover {
+                    border-bottom: 2px solid $gold;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .projects-content {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+        .projects-img {
+            display: inline-block;
+            width: 20%;
+            margin: 2%;
+            position: relative;
+            img {
+                margin: 0;
+                height: auto;
+                width: 290px;
+                height: 165px;
+            }
+            .overlay {
+                width: 290px;
+                height: 165px;
+                position: absolute;
+                opacity: 0;
+                transition: .5s ease-in-out;
+                top: 0;
+                left: 0;
+                background-color: $black;
+                .overlay-text {
+                    color: white;
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    h3 {
                         text-transform: uppercase;
-                        text-align: center;
-                        font-family: "Montserrat";
-                        h3 {
-                            font-size: 24px;
-                            font-weight: 800;
-                        }
-                        p {
-                            font-size: 14px;
-                            color: #aeaeae;
-                        }
                     }
-                    
-                    @mixin button-style {
-                        width: 194px;
-                        height: 45px;
-                        background-color: $gold;
-                        text-transform: uppercase;
-                        font-size: 12px;
-                        color: $white;
-                        border: none;
-                        border-radius: 25px;
+                }
+            }
+            &:hover .overlay {
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+    }
+    .button {
+        @include button-style;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+// Team
+.team {
+    background-image: url("../images/Bgimage.png");
+    background-color: $black;
+    @include background;
+    background-repeat: no-repeat;
+    padding: 120px 0 30px 0;
+    .heading {
+        color: $white;
+    }
+    .team-content {
+        width: 80%;
+        margin: 50px auto;
+        .team-member {
+            display: inline-block;
+            width: 306px;
+            height: 400px;
+            margin: 45px;
+            background-color: $white;
+            img {
+                display: block;
+                margin: 25px auto;
+            }
+            h4 {
+                text-transform: uppercase;
+                font-size: 24px;
+                text-align: center;
+                font-family: 'Montserrat';
+                font-weight: 600;
+                margin: 25px 0;
+            }
+            p {
+                text-align: center;
+                font-family: 'Montserrat';
+                margin: 25px 0;
+            }
+            .team-icons {
+                width: 100%;
+                i {
+                    height: 33px;
+                    width: 33px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    margin: 3px;
+                    background: #bebebe;
+                    color: $white;
+                    background-size: 70px 70px;
+                    transition: .5s ease-in;
+                    &:hover {
+                        background: $gold;
                         cursor: pointer;
-                        transition: .5s ease-out;
-                        &:hover {
-                            background-color: $gray;
-                            color: $gold;
-                            font-weight: 1000;
-                            border: 3px solid $gold;
-                        }
                     }
-                    
-                    // GLOBAL STYLES
-                    * {
-                        box-sizing: border-box;
-                        margin: 0;
-                        padding: 0;
-                        scroll-behavior: smooth;
-                        font-family: "Montserrat";
+                }
+            }
+        }
+    }
+}
+
+// Clients
+.clients {
+    background-color: $gray;
+    padding: 120px 0 30px 0;
+    .heading {
+        @include section-heading;
+    }
+    .clients-content {
+        display: block;
+        margin: 20px auto;
+        img {
+            display: block;
+            margin: 35px auto;
+        }
+        h3 {
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+            margin: 20px auto;
+        }
+        p {
+            color: $black;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            &:last-of-type {
+                color: #7e7e7e;
+                font-family: 'Montserrat';
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 25px;
+                width: 60%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+// Patrons
+.patrons {
+    width: 100%;
+    margin: 50px auto;
+    img {
+        margin-left: 55px;
+        padding: 40px;
+    }
+}
+
+// Prices
+.price {
+    background-color: $gray;
+    .container {
+        width: 70%;
+        margin: 25px auto;
+        .price-border {
+            background: $white;
+            width: 255px;
+            height: 343px;
+            text-align: center;
+            padding: 25px 0 25px 0;
+            // margin: 0 20px;
+            display: inline-block;
+            h3 {
+                font-family: 'Montserrat';
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #242424;
+            }
+            p {
+                color: #242424;
+                font-family: 'Montserrat';
+                font-size: 30px;
+                font-weight: 900;
+                line-height: 21px;
+                text-transform: uppercase;
+                letter-spacing: 4.8px;
+                span {
+                    font-size: 10px;
+                }
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                li {
+                    color: #7e7e7e;
+                    font-family: 'Montserrat';
+                    font-size: 10px;
+                    font-weight: 550;
+                    line-height: 13px;
+                }
+            }
+            .button {
+                @include button-style;
+                background-color: $black;
+                margin-top: 20px;
+                &:hover {
+                    background-color: $gold;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Premium
+.premium {
+    padding: 120px 0 30px 0;
+    .premium-content {
+        margin: 75px 0 0 60px;
+        width: 100%;
+        .premium-img {
+            width: 40%;
+        }
+        .feature {
+            float: right;
+            display: block;
+            width: 40%;
+            margin: 75px 60px 0 0;
+            position: relative;
+            img {
+                position: absolute;
+                left: -115px;
+            }
+            .feature-content {
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 21px;
+                    text-transform: uppercase;
+                    font-weight: 750;
+                }
+                p {
+                    max-width: 450px;
+                    color: $black;
+                }
+                ul {
+                    list-style-type: none;
+                    margin-top: 10px;
+                    li {
+                        color: $black;
+                        text-transform: uppercase;
                     }
-                    
-                    .heading {
-                        @include section-heading;
+                }
+            }
+        }
+    }
+    .premium-line {
+        content: "";
+        width: 1000px;
+        border: 0.5px solid $black;
+        display: block;
+        margin: 25px auto;
+    }
+    .button {
+        @include button-style;
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+// Facts
+.facts {
+    padding: 120px 0 30px 0;
+    background-color: $black;
+    .heading {
+        color: $white;
+    }
+    .facts-content {
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+        .facts-numbers {
+            width: 20%;
+            display: inline-block;
+            padding: 30px;
+            margin-right: 60px;
+            text-align: center;
+            &:first-of-type {
+                margin-left: 10px;
+            }
+            h4 {
+                color: $gold;
+                font-size: 32px;
+            }
+            .facts-line {
+                content: "";
+                width: 30px;
+                border: 1px solid $gray;
+                display: block;
+                margin: 25px auto;
+            }
+            h5 {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 16px;
+                height: 30px;
+                max-width: 170px;
+                display: block;
+                margin: 15px auto;
+            }
+            p {
+                width: 200px;
+                display: block;
+                margin: 25px auto;
+                color: $gray;
+            }
+        }
+    }
+}
+
+// Icons
+.icon-bar {
+    padding: 50px;
+    width: 80%;
+    margin: 0 auto;
+    .icon {
+        display: inline-block;
+        margin: 0 auto;
+        margin-right: 100px;
+        &:first-of-type {
+            margin-left: 50px;
+        }
+        p {
+            display: inline-block;
+            color: $black;
+            font-weight: 600;
+            margin-left: 1px;
+        }
+    }
+}
+
+// Contact
+.contact {
+    padding: 120px 0 30px 0;
+    background-color: $gray;
+    .contact-content {
+        width: 100%;
+        max-width: 520px;
+        margin: 20px auto;
+        display: block;
+        form {
+            input {
+                border: none;
+                border-bottom: 2px solid #8b8b8b;
+                background: $gray;
+                width: 250px;
+                margin: 25px 5px;
+                text-transform: uppercase;
+                display: inline-block;
+                &:nth-of-type(2) {
+                    float: right;
+                }
+                &:last-of-type {
+                    width: 520px;
+                    display: block;
+                }
+            }
+            textarea {
+                width: 520px;
+                height: 50px;
+                margin: 15px 5px;
+                border: none;
+                border-bottom: 2px solid #8b8b8b;
+                text-transform: uppercase;
+                background: $gray;
+            }
+            .button {
+                @include button-style;
+                display: block;
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
+// Map
+.map {
+    background-image: url("../images/Map.png");
+    @include background;
+    padding: 25px 0;
+    .map-content {
+        margin: 25px 0 25px 150px;
+        .address {
+            background-color: $white;
+            width: 500px;
+            ul {
+                list-style-type: none;
+                li {
+                    margin: 15px 0;
+                    display: inline-block;
+                    &:nth-of-type(3) {
+                        margin-right: 30px;
                     }
-                    
-                    // Navigation
-                    .nav-bar {
-                        background-color: $black;
-                        height: 100px;
-                        z-index: 2;
-                        img {
-                            float: left;
-                            width: 50px;
-                            height: 50px;
-                            margin-top: 20px;
-                            margin-left: 45px;
-                        }
-                        ul {
-                            list-style: none;
-                            float: right;
-                            height: 100%;
-                            li {
-                                display: inline-block;
-                                position: relative;
-                                padding: 40px 20px;
-                                transition: .5s ease;
-                                border: none;
-                                &:hover {
-                                    border-bottom: 4px solid $gold;
-                                }
-                                a {
-                                    width: 45px;
-                                    height: 10px;
-                                    color: $white;
-                                    font-family: 'Montserrat', sans-serif;
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                    text-transform: uppercase;
-                                    text-decoration: none;
-                                }
-                            }
-                        }
+                    &:nth-of-type(4) {
+                        margin-right: 35px;
                     }
-                    
-                    // Hero
-                    .hero {
-                        @include background;
-                        width: 100%;
-                        height: 90vh;
-                        background: $black;
-                        background-image: url("../images/Bg_img_01.png");
-                        position: relative;
-                        .hero-container {
-                            text-align: center;
-                            padding-top: 150px;
-                            h1 {
-                                font-size: 72px;
-                                text-transform: uppercase;
-                                font-weight: 1000;
-                                &:first-of-type {
-                                    color: $white;
-                                }
-                                color: $gold;
-                            }
-                            p {
-                                color: $white;
-                                font-size: 24px;
-                                font-family: "Montserrat - Semi Bold";
-                                text-transform: uppercase;
-                                margin-bottom: 10px;
-                            }
-                            .button {
-                                @include button-style;
-                                &:hover {
-                                    background-color: $black;
-                                }
-                            }
-                        }
-                        .phonecall {
-                            position: absolute;
-                            right: 5%;
-                            bottom: -5%;
-                            &:hover {
-                                cursor: pointer;
-                            }
-                        }
+                    img {
+                        float: left;
+                        margin-left: 20px;
                     }
-                    
-                    // About
-                    .about {
-                        padding: 120px 0 30px 0;
-                        background-color: $gray;
-                        .about-content {
-                            margin: 0 75px;
-                            display: -ms-flexbox;
-                            display: flex;
-                            -ms-flex-align: center;
-                            align-items: center;
-                            -ms-flex-pack: center;
-                            justify-content: center;
-                            -ms-flex-wrap: wrap;
-                            flex-wrap: wrap;
-                            p {
-                                width: 600px;
-                                color: $black;
-                                font-family: 'Montserrat';
-                                font-size: 14px;
-                                font-weight: 300;
-                                line-height: 25px;
-                                margin: 25px auto;
-                                text-align: center;
-                            }
-                            video {
-                                width: 320px;
-                                vertical-align: baseline;
-                                margin-left: 150px;
-                            }
-                        }
-                        .button {
-                            @include button-style;
-                            margin-left: 15%;
-                        }
+                    p {
+                        margin: 7px;
+                        display: inline-block;
                     }
-                    
-                    // Services
-                    .services {
-                        background: $black;
-                        padding: 120px 0 30px 0;
-                        .heading {
-                            color: $white;
-                        }
-                        .services-content {
-                            display: block;
-                            width: 80%;
-                            margin: 0 auto;
-                            padding: 50px;
-                            .service {
-                                display: inline-block;
-                                max-width: 285px;
-                                height: 240px;
-                                padding: 20px 25px;
-                                width: 24%;
-                                border-left: 5px solid $white;
-                                &:last-of-type {
-                                    border-right: 5px solid $white;
-                                }
-                                img {
-                                    display: block;
-                                    margin: 0 auto;
-                                    margin-bottom: 20px;
-                                }
-                                h3 {
-                                    color: $white;
-                                    text-align: center;
-                                    text-transform: uppercase;
-                                    margin-top: 20px;
-                                }
-                                p {
-                                    color: $white;
-                                    text-align: center;
-                                    text-transform: uppercase;
-                                    margin-top: 20px;
-                                }
-                            }
-                        }
+                }
+            }
+        }
+    }
+}
+
+// Footer
+footer {
+    background: $black;
+    color: $white;
+    padding: 25px 0;
+    position: relative;
+    .container {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .awax {
+            color: $white;
+            margin-bottom: 0;
+            position: absolute;
+            bottom: 30px;
+            left: 15%;
+            text-transform: uppercase;
+        }
+        .col-3 {
+            width: 25%;
+            align-self: center;
+            p {
+                font-size: 15px;
+                color: $gray;
+            }
+            .team-icons {
+                width: 100%;
+                i {
+                    height: 33px;
+                    width: 33px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    margin: 3px;
+                    background: #bebebe;
+                    color: $white;
+                    background-size: 70px 70px;
+                    transition: .5s ease-in;
+                    &:hover {
+                        background: $gold;
+                        cursor: pointer;
                     }
-                    
-                    // Projects
-                    .projects {
-                        padding: 120px 0 30px 0;
-                        background-color: $gray;
-                        .projects-list {
-                            background: #ededed;
-                            border: 3px solid #d0d0d0;
-                            border-radius: 25px;
-                            width: 800px;
-                            margin: 0 auto;
-                            margin-top: 50px;
-                            ul {
-                                list-style-type: none;
-                                align-self: center;
-                                text-transform: uppercase;
-                                font-family: 'Montserrat';
-                                font-size: 14px;
-                                li {
-                                    display: inline-block;
-                                    padding: 15px 25px 10px 25px;
-                                    transition: .5s ease-out;
-                                    border-right: 1px solid #d0d0d0;
-                                    &:first-of-type {
-                                        margin-left: 30px;
-                                    }
-                                    &:last-of-type {
-                                        border: none;
-                                    }
-                                    &:hover {
-                                        border-bottom: 2px solid $gold;
-                                        cursor: pointer;
-                                    }
-                                }
-                            }
-                        }
-                        .projects-content {
-                            width: 90%;
-                            margin: 0 auto;
-                            margin-top: 50px;
-                            .projects-img {
-                                display: inline-block;
-                                width: 20%;
-                                margin: 2%;
-                                position: relative;
-                                img {
-                                    margin: 0;
-                                    height: auto;
-                                    width: 290px;
-                                    height: 165px;
-                                }
-                                .overlay {
-                                    width: 290px;
-                                    height: 165px;
-                                    position: absolute;
-                                    opacity: 0;
-                                    transition: .5s ease-in-out;
-                                    top: 0;
-                                    left: 0;
-                                    background-color: $black;
-                                    .overlay-text {
-                                        color: white;
-                                        font-size: 20px;
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 50%;
-                                        -webkit-transform: translate(-50%, -50%);
-                                        -ms-transform: translate(-50%, -50%);
-                                        transform: translate(-50%, -50%);
-                                        text-align: center;
-                                        h3 {
-                                            text-transform: uppercase;
-                                        }
-                                    }
-                                }
-                                &:hover .overlay {
-                                    opacity: 0.7;
-                                    cursor: pointer;
-                                }
-                            }
-                        }
-                        .button {
-                            @include button-style;
-                            display: block;
-                            margin: 0 auto;
-                        }
+                }
+            }
+            &:nth-child(1) {
+                align-self: flex-start;
+                width: 300px;
+            }
+            &::last-of-type {
+                float: right;
+            }
+            .footer-box {
+                width: 350px;
+                height: 200px;
+                background: #373737;
+                text-align: center;
+                padding: 50px 0;
+                input {
+                    display: block;
+                    color: $gray;
+                    text-transform: uppercase;
+                    margin: 0 auto;
+                    background-color: #373737;
+                    border: none;
+                }
+                .footer-line {
+                    content: "";
+                    width: 150px;
+                    border: 1px solid $gray;
+                    display: block;
+                    margin: 25px auto;
+                }
+                .button {
+                    @include button-style;
+                    &:hover {
+                        background-color: #373737;
                     }
-                    
-                    // Team
-                    .team {
-                        background-image: url("../images/Bgimage.png");
-                        background-color: $black;
-                        @include background;
-                        background-repeat: no-repeat;
-                        padding: 120px 0 30px 0;
-                        .heading {
-                            color: $white;
-                        }
-                        .team-content {
-                            width: 80%;
-                            margin: 50px auto;
-                            .team-member {
-                                display: inline-block;
-                                width: 306px;
-                                height: 400px;
-                                margin: 45px;
-                                background-color: $white;
-                                img {
-                                    display: block;
-                                    margin: 25px auto;
-                                }
-                                h4 {
-                                    text-transform: uppercase;
-                                    font-size: 24px;
-                                    text-align: center;
-                                    font-family: 'Montserrat';
-                                    font-weight: 600;
-                                    margin: 25px 0;
-                                }
-                                p {
-                                    text-align: center;
-                                    font-family: 'Montserrat';
-                                    margin: 25px 0;
-                                }
-                                .team-icons {
-                                    width: 100%;
-                                    i {
-                                        height: 33px;
-                                        width: 33px;
-                                        padding: 10px;
-                                        border-radius: 50%;
-                                        margin: 3px;
-                                        background: #bebebe;
-                                        color: $white;
-                                        background-size: 70px 70px;
-                                        transition: .5s ease-in;
-                                        &:hover {
-                                            background: $gold;
-                                            cursor: pointer;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Clients
-                    .clients {
-                        background-color: $gray;
-                        padding: 120px 0 30px 0;
-                        .heading {
-                            @include section-heading;
-                        }
-                        .clients-content {
-                            display: block;
-                            margin: 20px auto;
-                            img {
-                                display: block;
-                                margin: 35px auto;
-                            }
-                            h3 {
-                                color: $black;
-                                font-size: 24px;
-                                font-weight: 700;
-                                line-height: 18px;
-                                text-align: center;
-                                margin: 20px auto;
-                            }
-                            p {
-                                color: $black;
-                                font-size: 18px;
-                                line-height: 18px;
-                                text-align: center;
-                                &:last-of-type {
-                                    color: #7e7e7e;
-                                    font-family: 'Montserrat';
-                                    font-size: 14px;
-                                    font-weight: 300;
-                                    line-height: 25px;
-                                    width: 60%;
-                                    display: block;
-                                    margin: 0 auto;
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Patrons
-                    .patrons {
-                        width: 100%;
-                        margin: 50px auto;
-                        img {
-                            margin-left: 55px;
-                            padding: 40px;
-                        }
-                    }
-                    
-                    // Prices
-                    .price {
-                        background-color: $gray;
-                        .container {
-                            width: 70%;
-                            margin: 25px auto;
-                            .price-border {
-                                background: $white;
-                                width: 255px;
-                                height: 343px;
-                                text-align: center;
-                                padding: 25px 0 25px 0;
-                                // margin: 0 20px;
-                                display: inline-block;
-                                h3 {
-                                    font-family: 'Montserrat';
-                                    font-size: 14px;
-                                    font-weight: 600;
-                                    text-transform: uppercase;
-                                    color: #242424;
-                                }
-                                p {
-                                    color: #242424;
-                                    font-family: 'Montserrat';
-                                    font-size: 30px;
-                                    font-weight: 900;
-                                    line-height: 21px;
-                                    text-transform: uppercase;
-                                    letter-spacing: 4.8px;
-                                    span {
-                                        font-size: 10px;
-                                    }
-                                }
-                                ul {
-                                    list-style-type: none;
-                                    padding: 0;
-                                    li {
-                                        color: #7e7e7e;
-                                        font-family: 'Montserrat';
-                                        font-size: 10px;
-                                        font-weight: 550;
-                                        line-height: 13px;
-                                    }
-                                }
-                                .button {
-                                    @include button-style;
-                                    background-color: $black;
-                                    margin-top: 20px;
-                                    &:hover {
-                                        background-color: $gold;
-                                        color: $white;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Premium
-                    .premium {
-                        padding: 120px 0 30px 0;
-                        .premium-content {
-                            margin: 75px 0 0 60px;
-                            width: 100%;
-                            .premium-img {
-                                width: 40%;
-                            }
-                            .feature {
-                                float: right;
-                                display: block;
-                                width: 40%;
-                                margin: 75px 60px 0 0;
-                                position: relative;
-                                img {
-                                    position: absolute;
-                                    left: -115px;
-                                }
-                                .feature-content {
-                                    margin-bottom: 30px;
-                                    h3 {
-                                        font-size: 21px;
-                                        text-transform: uppercase;
-                                        font-weight: 750;
-                                    }
-                                    p {
-                                        max-width: 450px;
-                                        color: $black;
-                                    }
-                                    ul {
-                                        list-style-type: none;
-                                        margin-top: 10px;
-                                        li {
-                                            color: $black;
-                                            text-transform: uppercase;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .premium-line {
-                            content: "";
-                            width: 1000px;
-                            border: 0.5px solid $black;
-                            display: block;
-                            margin: 25px auto;
-                        }
-                        .button {
-                            @include button-style;
-                            display: block;
-                            margin: 20px auto;
-                        }
-                    }
-                    
-                    // Facts
-                    .facts {
-                        padding: 120px 0 30px 0;
-                        background-color: $black;
-                        .heading {
-                            color: $white;
-                        }
-                        .facts-content {
-                            width: 90%;
-                            display: block;
-                            margin: 20px auto;
-                            .facts-numbers {
-                                width: 20%;
-                                display: inline-block;
-                                padding: 30px;
-                                margin-right: 60px;
-                                text-align: center;
-                                &:first-of-type {
-                                    margin-left: 10px;
-                                }
-                                h4 {
-                                    color: $gold;
-                                    font-size: 32px;
-                                }
-                                .facts-line {
-                                    content: "";
-                                    width: 30px;
-                                    border: 1px solid $gray;
-                                    display: block;
-                                    margin: 25px auto;
-                                }
-                                h5 {
-                                    color: $white;
-                                    text-transform: uppercase;
-                                    font-size: 16px;
-                                    height: 30px;
-                                    max-width: 170px;
-                                    display: block;
-                                    margin: 15px auto;
-                                }
-                                p {
-                                    width: 200px;
-                                    display: block;
-                                    margin: 25px auto;
-                                    color: $gray;
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Icons
-                    .icon-bar {
-                        padding: 50px;
-                        width: 80%;
-                        margin: 0 auto;
-                        .icon {
-                            display: inline-block;
-                            margin: 0 auto;
-                            margin-right: 100px;
-                            &:first-of-type {
-                                margin-left: 50px;
-                            }
-                            p {
-                                display: inline-block;
-                                color: $black;
-                                font-weight: 600;
-                                margin-left: 1px;
-                            }
-                        }
-                    }
-                    
-                    // Contact
-                    .contact {
-                        padding: 120px 0 30px 0;
-                        background-color: $gray;
-                        .contact-content {
-                            width: 100%;
-                            max-width: 520px;
-                            margin: 20px auto;
-                            display: block;
-                            form {
-                                input {
-                                    border: none;
-                                    border-bottom: 2px solid #8b8b8b;
-                                    background: $gray;
-                                    width: 250px;
-                                    margin: 25px 5px;
-                                    text-transform: uppercase;
-                                    display: inline-block;
-                                    &:nth-of-type(2) {
-                                        float: right;
-                                    }
-                                    &:last-of-type {
-                                        width: 520px;
-                                        display: block;
-                                    }
-                                }
-                                textarea {
-                                    width: 520px;
-                                    height: 50px;
-                                    margin: 15px 5px;
-                                    border: none;
-                                    border-bottom: 2px solid #8b8b8b;
-                                    text-transform: uppercase;
-                                    background: $gray;
-                                }
-                                .button {
-                                    @include button-style;
-                                    display: block;
-                                    margin: 20px auto;
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Map
-                    .map {
-                        background-image: url("../images/Map.png");
-                        @include background;
-                        padding: 25px 0;
-                        .map-content {
-                            margin: 25px 0 25px 150px;
-                            .address {
-                                background-color: $white;
-                                width: 500px;
-                                ul {
-                                    list-style-type: none;
-                                    li {
-                                        margin: 15px 0;
-                                        display: inline-block;
-                                        &:nth-of-type(3) {
-                                            margin-right: 30px;
-                                        }
-                                        &:nth-of-type(4) {
-                                            margin-right: 35px;
-                                        }
-                                        img {
-                                            float: left;
-                                            margin-left: 20px;
-                                        }
-                                        p {
-                                            margin: 7px;
-                                            display: inline-block;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    // Footer
-                    footer {
-                        background: $black;
-                        color: $white;
-                        padding: 25px 0;
-                        position: relative;
-                        .container {
-                            width: 80%;
-                            margin: 20px auto;
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            justify-content: space-evenly;
-                            flex-wrap: wrap;
-                            .awax {
-                                color: $white;
-                                margin-bottom: 0;
-                                position: absolute;
-                                bottom: 30px;
-                                left: 15%;
-                                text-transform: uppercase;
-                            }
-                            .col-3 {
-                                width: 25%;
-                                align-self: center;
-                                p {
-                                    font-size: 15px;
-                                    color: $gray;
-                                }
-                                .team-icons {
-                                    width: 100%;
-                                    i {
-                                        height: 33px;
-                                        width: 33px;
-                                        padding: 10px;
-                                        border-radius: 50%;
-                                        margin: 3px;
-                                        background: #bebebe;
-                                        color: $white;
-                                        background-size: 70px 70px;
-                                        transition: .5s ease-in;
-                                        &:hover {
-                                            background: $gold;
-                                            cursor: pointer;
-                                        }
-                                    }
-                                }
-                                &:nth-child(1) {
-                                    align-self: flex-start;
-                                    width: 300px;
-                                }
-                                &::last-of-type {
-                                    float: right;
-                                }
-                                .footer-box {
-                                    width: 350px;
-                                    height: 200px;
-                                    background: #373737;
-                                    text-align: center;
-                                    padding: 50px 0;
-                                    input {
-                                        display: block;
-                                        color: $gray;
-                                        text-transform: uppercase;
-                                        margin: 0 auto;
-                                        background-color: #373737;
-                                        border: none;
-                                    }
-                                    .footer-line {
-                                        content: "";
-                                        width: 150px;
-                                        border: 1px solid $gray;
-                                        display: block;
-                                        margin: 25px auto;
-                                    }
-                                    .button {
-                                        @include button-style;
-                                        &:hover {
-                                            background-color: #373737;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .scroll-up {
-                            position: absolute;
-                            left: 5%;
-                            top: -10%;
-                        }
-                    }
+                }
+            }
+        }
+    }
+    .scroll-up {
+        position: absolute;
+        left: 5%;
+        top: -10%;
+    }
+}
