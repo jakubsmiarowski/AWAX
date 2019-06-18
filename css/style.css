@@ -82,7 +82,7 @@
 
 .hero .hero-container {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 250px;
 }
 
 .hero .hero-container h1 {
@@ -139,8 +139,12 @@
 }
 
 .about {
-  padding: 120px 0 30px 0;
+  padding: 75px 0;
   background-color: #F7F7F7;
+}
+
+.about .heading {
+  margin-bottom: 50px;
 }
 
 .about .about-content {
@@ -162,7 +166,7 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 25px;
-  margin: 25px auto;
+  margin: 25px;
   text-align: center;
 }
 
@@ -195,7 +199,7 @@
 
 .services {
   background: #1e272e;
-  padding: 120px 0 30px 0;
+  padding: 75px 0;
 }
 
 .services .heading {
@@ -207,15 +211,17 @@
   width: 80%;
   margin: 0 auto;
   padding: 50px;
+  height: 300px;
 }
 
 .services .services-content .service {
   display: inline-block;
   max-width: 285px;
   height: 240px;
-  padding: 20px 25px;
-  width: 24%;
+  padding: 20px;
+  width: 25%;
   border-left: 5px solid #FFFFFF;
+  float: left;
 }
 
 .services .services-content .service:last-of-type {
@@ -243,7 +249,7 @@
 }
 
 .projects {
-  padding: 120px 0 30px 0;
+  padding: 75px 0;
   background-color: #F7F7F7;
 }
 
@@ -365,7 +371,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 120px 0 30px 0;
+  padding: 75px 0;
 }
 
 .team .heading {
@@ -373,15 +379,16 @@
 }
 
 .team .team-content {
-  width: 80%;
+  width: 100%;
   margin: 50px auto;
 }
 
 .team .team-content .team-member {
   display: inline-block;
-  width: 306px;
+  width: 23%;
+  margin: 0 1%;
+  padding: 20px;
   height: 400px;
-  margin: 45px;
   background-color: #FFFFFF;
 }
 
@@ -407,6 +414,8 @@
 
 .team .team-content .team-member .team-icons {
   width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .team .team-content .team-member .team-icons i {
@@ -414,9 +423,10 @@
   width: 33px;
   padding: 10px;
   border-radius: 50%;
-  margin: 3px;
+  margin: 3px 12px;
   background: #bebebe;
   color: #FFFFFF;
+  text-align: center;
   background-size: 70px 70px;
   transition: .5s ease-in;
 }
@@ -428,7 +438,7 @@
 
 .clients {
   background-color: #F7F7F7;
-  padding: 120px 0 30px 0;
+  padding: 75px 0;
 }
 
 .clients .heading {
@@ -493,24 +503,33 @@
 .patrons img {
   margin-left: 55px;
   padding: 40px;
+  text-align: center;
 }
 
 .price {
   background-color: #F7F7F7;
+  padding: 75px 0;
+  height: 300px;
 }
 
 .price .container {
-  width: 70%;
+  width: 100%;
   margin: 25px auto;
+}
+
+.price .container .row {
+  width: 100%;
 }
 
 .price .container .price-border {
   background: #FFFFFF;
-  width: 255px;
   height: 343px;
   text-align: center;
   padding: 25px 0 25px 0;
+  width: 20%;
+  margin: 0 2%;
   display: inline-block;
+  float: left;
 }
 
 .price .container .price-border h3 {
@@ -576,11 +595,11 @@
 }
 
 .premium {
-  padding: 120px 0 30px 0;
+  padding: 75px 0;
 }
 
 .premium .premium-content {
-  margin: 75px 0 0 60px;
+  margin: 75px 0 0 0;
   width: 100%;
 }
 
@@ -893,6 +912,7 @@ footer .container .col-3 .team-icons i {
   color: #FFFFFF;
   background-size: 70px 70px;
   transition: .5s ease-in;
+  text-align: center;
 }
 
 footer .container .col-3 .team-icons i:hover {

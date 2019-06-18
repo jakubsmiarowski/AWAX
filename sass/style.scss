@@ -140,8 +140,11 @@
 
 // About
 .about {
-    padding: 120px 0 30px 0;
+    padding: 75px 0;
     background-color: $gray;
+    .heading {
+        margin-bottom: 50px;
+    }
     .about-content {
         margin: 0 75px;
         display: -ms-flexbox;
@@ -177,7 +180,7 @@
 // Services
 .services {
     background: $black;
-    padding: 120px 0 30px 0;
+    padding: 75px 0;
     .heading {
         color: $white;
     }
@@ -186,13 +189,15 @@
         width: 80%;
         margin: 0 auto;
         padding: 50px;
+        height: 300px;
         .service {
             display: inline-block;
             max-width: 285px;
             height: 240px;
-            padding: 20px 25px;
-            width: 24%;
+            padding: 20px;
+            width: 25%;
             border-left: 5px solid $white;
+            float: left;
             &:last-of-type {
                 border-right: 5px solid $white;
             }
@@ -219,7 +224,7 @@
 
 // Projects
 .projects {
-    padding: 120px 0 30px 0;
+    padding: 75px 0;
     background-color: $gray;
     .projects-list {
         background: #ededed;
@@ -310,18 +315,19 @@
     background-color: $black;
     @include background;
     background-repeat: no-repeat;
-    padding: 120px 0 30px 0;
+    padding: 75px 0;
     .heading {
         color: $white;
     }
     .team-content {
-        width: 80%;
+        width: 100%;
         margin: 50px auto;
         .team-member {
             display: inline-block;
-            width: 306px;
+            width: 23%;
+            margin: 0 1%;
+            padding: 20px;
             height: 400px;
-            margin: 45px;
             background-color: $white;
             img {
                 display: block;
@@ -342,14 +348,17 @@
             }
             .team-icons {
                 width: 100%;
+                display: block;
+                margin: 0 auto;
                 i {
                     height: 33px;
                     width: 33px;
                     padding: 10px;
                     border-radius: 50%;
-                    margin: 3px;
+                    margin: 3px 12px;
                     background: #bebebe;
                     color: $white;
+                    text-align: center;
                     background-size: 70px 70px;
                     transition: .5s ease-in;
                     &:hover {
@@ -365,7 +374,7 @@
 // Clients
 .clients {
     background-color: $gray;
-    padding: 120px 0 30px 0;
+    padding: 75px 0;
     .heading {
         @include section-heading;
     }
@@ -410,23 +419,31 @@
     img {
         margin-left: 55px;
         padding: 40px;
+        text-align: center;
     }
 }
 
 // Prices
 .price {
     background-color: $gray;
+    padding: 75px 0;
+    height: 300px;
     .container {
-        width: 70%;
+        width: 100%;
         margin: 25px auto;
+        .row {
+            width: 100%
+        }
         .price-border {
             background: $white;
-            width: 255px;
             height: 343px;
             text-align: center;
             padding: 25px 0 25px 0;
             // margin: 0 20px;
+            width: 20%;
+            margin: 0 2%;
             display: inline-block;
+            float: left;
             h3 {
                 font-family: 'Montserrat';
                 font-size: 14px;
@@ -472,9 +489,9 @@
 
 // Premium
 .premium {
-    padding: 120px 0 30px 0;
+    padding: 75px 0;
     .premium-content {
-        margin: 75px 0 0 60px;
+        margin: 75px 0 0 0;
         width: 100%;
         .premium-img {
             width: 40%;
@@ -716,6 +733,7 @@ footer {
                     color: $white;
                     background-size: 70px 70px;
                     transition: .5s ease-in;
+                    text-align: center;
                     &:hover {
                         background: $gold;
                         cursor: pointer;
