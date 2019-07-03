@@ -503,6 +503,7 @@
 .patrons {
   width: 100%;
   margin: 50px auto;
+  text-align: center;
 }
 
 .patrons img {
@@ -514,7 +515,7 @@
 .price {
   background-color: #F7F7F7;
   padding: 75px 0;
-  height: 300px;
+  height: 600px;
 }
 
 .price .container {
@@ -679,7 +680,7 @@
 }
 
 .facts {
-  padding: 120px 0 30px 0;
+  padding: 75px 0 30px 0;
   background-color: #1e272e;
 }
 
@@ -694,7 +695,7 @@
 }
 
 .facts .facts-content .facts-numbers {
-  width: 20%;
+  width: 19%;
   display: inline-block;
   padding: 30px;
   margin-right: 60px;
@@ -702,7 +703,7 @@
 }
 
 .facts .facts-content .facts-numbers:first-of-type {
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
 .facts .facts-content .facts-numbers h4 {
@@ -759,7 +760,7 @@
 }
 
 .contact {
-  padding: 120px 0 30px 0;
+  padding: 75px 0 30px 0;
   background-color: #F7F7F7;
 }
 
